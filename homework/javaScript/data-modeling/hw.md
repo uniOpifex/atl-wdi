@@ -60,13 +60,20 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+> - projectGroup
+> - timeSinceInit
+> - task Status
+> - task name
+> - The above above items represent the needed data. We need to know the name of each, which group they belong, when they were initialized and what is their current status (started,WIP,Competed,etc).
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+> - photo.user
+> - photo.user.albums
+> - photo.uniqueKey
+> - Photo need to be tied to the user that created them and the album that user created it in. A unique photo key allows the photo to be shared.
 
 ### 3. Home Automation Manager
 
@@ -75,7 +82,17 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+> - home.sensor(key, and value(temp))
+> - home.clock
+> - home.light(key,and value(on/off))
+> - home.thermostat(value(on/off))
+> - home.setTemperaureRange(desiredTemp,tempDeviation)
+
+> - We need to track temperture and sensor location to make decisions
+> - We need to track time for home automation rules.
+> - track which lights are on or off
+> - track if Thermostat is on or of
+> - we need to way to set desired temperature and is deviation tolerance.
 
 ### 4. Sneaker Store
 
@@ -83,7 +100,11 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+> - user
+> - user.orderHistory
+> - user.curerntCart[products]
+> - products
+> - We need to track our users and our products. If our users are making selection those items are placed in products. When the users make a purchase those products are more a recorded orderHistory
 
 ## Representing Abstractions in Code
 
@@ -139,7 +160,8 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+> - This methods alows for easy recovery of information about the stations.
+> - It does not however allow to map the number of stops from station to station. We dont know the position of each station down each line, only what stations service which lines.
 
 ### 6. Doctor Appointment App
 
@@ -242,7 +264,8 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+> - 1 the second duplicates information about the patient and doctor in the Appointment object. While the second duplates appoitment info in the Doctor opbject.
+> - a better option who to have the doctor and patient objects reference the same appointment object.
 
 ## Tying It Together
 
@@ -253,13 +276,18 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+  > game .board .
+  > score
+  > turn .choice .checkforWin
+
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
+  > game.board = "1|2|3
+                  4|5|6
+                  7|8|9"
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+  > You need to be able to virtualize the spaces on the board, I do that with a string and alter the string per turn which an choice and check if that wins the game.
