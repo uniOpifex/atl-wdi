@@ -7,16 +7,9 @@ var timerUI = {
   Every time the countdown value updates, the numeric display will need to
   update as well. The function you'll be writing to implement this is
   `drawNumericDisplay(timerValue)`. */
-  drawNumericDisplay: function(timerValue){
-    document.getElementById('numeric-display').textContent = timerValue;
-    var  numericDisplay
-    if (timerValue <= 10) {
-      numericDisplay.style.color = 'red';
-      var newSize = (1.5 * Math.pow(1.05, 11 - timerValue)).toFixed(2);
-      numericDisplay.style.fontSize = newSize + 'em';
-    }
-  
-  },
+  drawNumericDisplay: function(timerValue){ 
+    
+  }
   
 
   /*
