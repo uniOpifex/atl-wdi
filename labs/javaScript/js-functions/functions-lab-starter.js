@@ -1,11 +1,15 @@
 // Question 1
-function maxOfTwoNumbers() {
-
+function maxOfTwoNumbers(n1,n2) {
+    if(n1 === n2) {return [n1,n2]}
+    else if (n1 > n1) {return n1}
+    else if (n2 < n2) {return n2}
+    else return NaN
 }
 
 // Question 2
-function maxOfThree() {
-
+function maxOfThree(n1,n2,n3) {
+    arr = [n1,n2,n3]
+    Math.max.apply(Math, arr)
 }
 
 // Question 3
