@@ -8,8 +8,10 @@ var timerUI = {
   update as well. The function you'll be writing to implement this is
   `drawNumericDisplay(timerValue)`. */
   drawNumericDisplay: function(timerValue){ 
+    document.getElementById('numeric-display').innerHTML = timerValue;
+    //sets then text of .nummeric-display equal to the timerValue
     
-  }
+  },
   
 
   /*
@@ -23,12 +25,29 @@ var timerUI = {
   `drawProgressBars(timerValue)`. 
   */
   drawProgressBars: function(timerValue){
-    
+    var timeCounter = 100 - timerValue;
+    document.getElementsByClassName('progress-bar')[0].style.width = timeCounter + '%';
+    // sets progressbar width to timeCounter'%'
   },
   drawLitFuses: function(timerValue){
     // Your Code Here
+    var perLeft = (timerValue /100);
+    document.getElementsByClassName('unburnt')[0].style.width =  perLeft*98 + '%';
+    document.getElementsByClassName('burnt')[0].style.width = (1 - perLeft)*98 + '%';
+    //sets width of unburnt to 98(timerValue/100)+'%' 
+    //sets width of burnt the difference timeValue and 100%
   },
   drawCrawlers: function(timerValue){
     // Your Code Here
+    var timeLeft = 100 - timerValue;
+    if (!(timerValue%2 === 0)) {
+      document.getElementsByClassName('crawler')[0].style.marginTop = '10px';
+    }
+    else {
+      document.getElementsByClassName('crawler')[0].style.marginTop = '0px';
+    }
+
+    document.getElementsByClassName('crawler')[0].style.marginLeft = (timeLeft*10) + 'px';
   }
+  
 };
