@@ -6,6 +6,7 @@ var hbs         = require('hbs');
 /* app settings*/
 var app         = express();
 var port        = process.env.PORT || 3000;
+const todosController = require("./controllers/todo");
 /* set up the application params*/
 
 // log
@@ -13,28 +14,26 @@ app.use( logger('dev'));
 
 /*Views*/
 app.set('view engine', 'hbs');
-
+/* Controllers*/
+app.use("/todos", todosController);
 /* HOME */
 app.get('/', function(req,res) {
   res.send('This is our Home Page');
 });
 
-/* INDEX TODOS */
-app.get('/todos', function(req,res) {
-  var seededTodos = [
-    {
-      description: "get beer",
-      urgent: true
-    }, {
-      description: "dry cleaning",
-      urgent: false
-    }
-  ];
+// /* INDEX TODOS */
+// app.get('/todos', function(req,res) {
+//   var seededTodos = [
+//     {
+//       description: "get beer",
+//       urgent: true
+//     }, {
+//       description: "dry cleaning",
+//       urgent: false
+//     }
+//   ];
 
-  res.render('todos/index', {
-    todos: seededTodos
-  });
-});
+
 
 // Start server
 app.listen(port, function() {
