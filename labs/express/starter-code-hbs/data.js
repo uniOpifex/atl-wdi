@@ -8,7 +8,7 @@ module.exports = {
       description: "dry cleaning",
       urgent: false
     },{
-        description: "things",
+        description: "Learn express",
         urgent: false
     }
   ]
