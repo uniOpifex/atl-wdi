@@ -12,16 +12,24 @@ var hbs = require('hbs');
 app.set("view engine", "hbs");
 app.set('views', './views');
 
-app.get('/topping/:type', function(req, res, next) {
+app.get("/order/:items", function(req, res, next){ 
+  const type = req.query.type;
+  const size = req.query.type;
+  res.render("order.hbs", { message: req.params.});
+
+});
+
+// app.get('/topping/:type', function(req, res, next) {
   
-      res.send("/type Pizza!");
-  });
+//       res.send("/type Pizza!");
+//   });
 
-  app.get('/order/:amount/:size', function(req, res, next) {
+//   app.get('/order/:amount/:size', function(req, res, next) {
     
-         res.send("Your order for /amount /six will be ready in 1 minute!");
-     });
+//          res.send("Your order for /amount /size will be ready in 1 minute!");
+//   });
 
+ 
 
 
 app.get('/', function(req, res, next) {
