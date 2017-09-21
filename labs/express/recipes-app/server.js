@@ -7,14 +7,11 @@ var bodyParser = require('body-parser');
 /* app settings*/
 var app         = express();
 var port        = process.env.PORT || 3000;
-const todosController = require("./controllers/todo");
+const recipeController = require("./controllers/recipe");
 /* set up the application params*/
 
 // log
 app.use( logger('dev'));
-
-
-
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -22,23 +19,13 @@ app.use(bodyParser.urlencoded({
 /*Views*/
 app.set('view engine', 'hbs');
 /* Controllers*/
-app.use("/todos", todosController);
+app.use("/recipes", recipeController);
 /* HOME */
 app.get('/', function(req,res) {
   res.send('This is our Home Page');
 });
 
-// /* INDEX TODOS */
-// app.get('/todos', function(req,res) {
-//   var seededTodos = [
-//     {
-//       description: "get beer",
-//       urgent: true
-//     }, {
-//       description: "dry cleaning",
-//       urgent: false
-//     }
-//   ];
+
 
 
 

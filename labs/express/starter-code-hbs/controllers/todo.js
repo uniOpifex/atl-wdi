@@ -31,7 +31,12 @@ router.get('/:id', (req, res) => {
     }
 })
 
-
+router.post('/', (req, res) => {
+        console.log('req.body');
+        const newTodo = req.body;
+        data.seededTodos.push(newTodo);
+        res.redirect("/todos");              
+});
 
 
 
