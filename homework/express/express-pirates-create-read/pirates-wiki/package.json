@@ -1,8 +1,8 @@
 {
-  "name": "pirates_crud_part_one_solution",
+  "name": "express-pirates-create-read",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "## Setup 1. Make sure that you are on the `master` branch of your class repo. Then run `git pull upstream master` to pull the latest materials from the instructors' repository. You shouldn't hit a merge conflict here, but if you do, flag down an instructor right away.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -10,9 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.14.2",
-    "express": "^4.13.4",
-    "hbs": "^2.9.0",
-    "morgan": "^1.6.1"
+    "body-parser": "^1.18.2",
+    "express": "^4.15.4",
+    "hbs": "^4.0.1",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2"
   }
 }

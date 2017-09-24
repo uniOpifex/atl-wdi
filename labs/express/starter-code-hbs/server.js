@@ -4,6 +4,7 @@ var logger      = require('morgan');
 var express     = require('express');
 var hbs         = require('hbs');
 var bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 /* app settings*/
 var app         = express();
 var port        = process.env.PORT || 3000;
@@ -11,6 +12,8 @@ const todosController = require("./controllers/todo");
 /* set up the application params*/
 
 // log
+
+app.use(methodOverride('_method'));
 app.use( logger('dev'));
 
 
