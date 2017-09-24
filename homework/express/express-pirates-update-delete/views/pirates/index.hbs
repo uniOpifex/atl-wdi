@@ -1,11 +1,20 @@
-<h1>The Flyest Pirates of Da 7 Cs</h1>
 
+<h1>There be Pirates</h1>
+<h1></h1>
 <ul>
-  {{#each pirates}}
-    <li><a href="/pirates/{{@index}}"><h2>{{name}}</h2></a></li>
-  {{/each}}
+    {{#each pirates}}
+    <li><a href="../pirates/{{@index}}">{{name}}</a></li>
+    <li>{{birthplace}}</li>
+    <li>{{death_year}}</li>
+    <li>{{base}}</li>
+    <li>{{nickname}}</li>
+   <a href="http://localhost:3000/pirates/{{@index}}/edit">Edit me!</a>
+    <form action="../pirates/{{@index}}?_method=DELETE" method="POST">
+    <input type="submit" value="DELETE"/>
+    </form>
+    <br>
+    {{/each}}
 </ul>
-
-<form action="/pirates/new">
-    <input type="submit" value="Create a New Pirate" />
-</form>
+<div>
+    <a href="http://localhost:3000/pirates/new">Add more pirates to the list!!</a>
+</div>

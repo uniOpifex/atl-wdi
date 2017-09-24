@@ -1,4 +1,7 @@
-module.exports = [
+
+module.exports = {
+
+	 seededPirates:    [
 	{
 	  name: 'Anne Bonny',
 	  birthplace: 'Kinsale, Ireland',
@@ -75,7 +78,7 @@ module.exports = [
 	  name: 'Thomas Jones',
 	  birthplace: 'Ireland',
 	  death_year: 1713,
-    based: 'Rhode Island',
+    base: 'Rhode Island',
 	  nickname: "Major Thomas Jones"
 	},{
 	  name: 'William Dampier',
@@ -90,4 +93,6 @@ module.exports = [
     base: "England",
 	  nickname: "Captain Kidd"
 	}
-];
+]
+};
+
