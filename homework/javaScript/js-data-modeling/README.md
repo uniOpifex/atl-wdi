@@ -30,7 +30,76 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
 ```
-Write your answer here or in a separate js file.
+//Write your answer here or in a separate js file.
+email service
+  has
+    name
+    email address
+    pop/imap setting
+
+
+User
+  has 
+    name
+    acount email adresss
+    user
+      .name
+      .password
+_________________________
+  var emailService  = {
+    id: Int,
+    name: String,
+    email: String,
+    pop: {
+      server: String,
+      username: String
+    },
+    imap: {
+      server: String,
+      username: String
+    },
+    emails: []
+
+  }
+
+  var user = {
+    id: int,
+    name String
+    email: String,
+    user: {
+      name: String,
+      password: String
+    }
+    emailService: []
+  }
+_________________________
+  var office365 = {
+    id: 123
+    name: 'office365',
+    email: 'somebusinessguy@owa.com'
+    pop : {
+      server: 'outlook.office365.com'
+      username: 'somebusinessguy@owa.com'
+    },
+    email: [{email0},{email2},{email3},ect...]
+
+  }
+
+    var steve = {
+    id: 1234,
+    name: Steve
+    email: stv@smrglrgy.com,
+    user: {
+      name: stvwndrfl,
+      password: ""awdvgyuioo85dbu"
+    }
+    emailsService: [
+      emailService : {},
+      emailService: {}
+    ]
+  }
+
+  
 ```
 
 ### 2. Radio on the Internet app
@@ -39,7 +108,49 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 
 
 ```
-Write your answer here or in a separate js file.
+//Write your answer here or in a separate js file.
+
+station has
+  -name
+  -playlists
+  -genere
+  -popularty
+
+playlist has
+  -name
+  -songs
+
+_________________________
+var station = {
+  id: Int,
+  name: String,
+  genre: String,
+  popularity: Int,
+  playlists: []
+}
+
+var playlist = {
+  name: String,
+  songs: []
+  songCount: Int
+}
+_________________________
+var top200 = {
+  id: 1234,
+  name: "the top 200",
+  genre: "Pop",
+  popularity: .94,
+  playlists: [
+    'playlist1','playlist2'
+  ]
+
+}
+
+var top20 = {
+  name: top20,
+  songs: [song1,song2,etc],
+  songCount: 4
+}
 ```
 
 ### 3. Rock Concert App
@@ -48,11 +159,60 @@ This app will be a tool for managing all of your favorite bands' concerts; it wi
 
 ```
 Write your answer here or in a separate js file.
+Band
+  has
+    -tourdate
+    -locations
+
+userAccount
+  has 
+    -recommended show
+    -purchased tickets
+tickets
+  has
+    -band
+    -date location
+    -ticketid
+_________________________
+const Band = {
+  tourdates: [],
+  locations: [],
+  
+}
+const userAccount = {
+    recommendedShow:  [], 
+    purchasedTickets: []
+}
+const tickets = {
+  band: String
+  date: Int
+  location: String
+  ticketid: Int
+}
+
+_________________________
+const SilverStein = {
+  tourdates: [20071108072200,20071208072200,200801042200,etc],
+  locations: ["SomeCity,Provence,Country",[...]]
+  
+}
+const userAccount = {
+    recommendedShow:  ["recShow1","recShow2",...], 
+    purchasedTickets: [[ticket1],[ticket2],...]
+}
+const tickets = {
+  band: Silverstein
+  date: 20071208072200,
+  location: "SomeCity,Provence,Country"
+  ticketid: 200001
+}
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
+
+
 
 ### 5. Team Tracker App
 

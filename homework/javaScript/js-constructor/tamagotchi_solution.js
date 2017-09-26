@@ -11,34 +11,35 @@ class Tamagotchi {
 
   cry() {
     this.foodInTummy--;
-    console.log("WAAAH!!!!!!");
-    console.log(this.name + ' has current food in tummy = ' + this.foodInTummy);
+    console.log("WAAAH!");
+    console.log(this.name + ' is currently so fed: ' + this.foodInTummy);
   };
   puke() {
     this.health--;
-    console.log('Bleeeeh! Sick!!!!!!');
+    console.log('Bleeghh! Sick!');
     console.log(this.name + ' has current health = ' + this.health);
   };
   yawn(){
     this.restedness--;
-    console.log('Yaaaawwwwn! So tired');
+    console.log(this.name+' has current restedness of '+this.restedness);
+    console.log('Yahhwn! So tired');
     console.log(this.name + ' has current restedness = ' + this.restedness);
   };
   start(){
     console.log("Starting " + this.name);
-    var self = this;
-    this.hungerTimer = setInterval(function() {
-      self.cry();
-    }, 6000);
-    this.yawnTimer = setInterval(function() {
-      self.yawn();
-    }, 10000);
-    this.sickTimer = setInterval(function() {
-      self.puke();
-    }, 25000);
+    var that = this;
+    this.hungerTimer = setInterval(() => {
+      that.cry();
+  }, 10000);
+  this.yawnTimer = setInterval(() => {
+      that.yawn();
+  }, 8000);
+  this.sickTimer = setInterval(() => {
+      that.puke();
+  }, 30000);
   };
   stop(){
-    console.log("Stopping " + this.name);
+    console.log("Stopped " + this.name);
     clearInterval(this.hungerTimer);
     clearInterval(this.yawnTimer);
     clearInterval(this.sickTimer);
@@ -47,3 +48,39 @@ class Tamagotchi {
 
 var bob = new Tamagotchi('bob', 'blah')
 bob.start();
+
+
+
+
+cry(){
+  this.foodInTummy -= 1;
+  console.log(`${this.name} WAAAHHHHHH!!!!!!`)
+  console.log(this.foodInTummy)
+}
+puke(){
+  this.foodInTummy -= 1;
+  console.log("WAAAAA WAAAA");
+  console.log(`${this.name} has this much food in their tummy ${this.foodInTummy}`);
+}
+yawn(){
+  this.restedness -= 1;
+  console.log(`${this.name} has current restedness of ${this.restedness}`)
+}
+start(){
+  let that = this;
+  this.hungerTimer = setInterval(() => {
+      that.cry();
+  }, 10000);
+  this.yawnTimer = setInterval(() => {
+      that.yawn();
+  }, 8000);
+  this.sickTimer = setInterval(() => {
+      that.puke();
+  }, 30000);
+}
+stop(){
+
+  clearInterval(this.hungerTimer);
+  clearInterval(this.sickTimer);
+  clearInterval(this.yawnTimer);
+}
