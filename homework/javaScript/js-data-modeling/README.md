@@ -206,7 +206,7 @@ const tickets = {
   location: "SomeCity,Provence,Country"
   ticketid: 200001
 }
-```
+``` 
 
 ### 4. Coffee To-Go App
 

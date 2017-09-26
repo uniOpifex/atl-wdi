@@ -17,9 +17,8 @@ var player = {
 }; //end player
 
 
-// player.feedTamagotchi(tamaBen);
-// player.knockOutTamagotchi(tamaBen);
-// player.medicateTamagotchi(tamaBen);
-// player.feedTamagotchi(tamaRyan);
-// player.knockOutTamagotchi(tamaRyan);
+// player.feedTamagotchi(rockMonster);
+// player.knockOutTamagotchi(rockMonster);
+// player.medicateTamagotchi(rockMonster);
+
 
