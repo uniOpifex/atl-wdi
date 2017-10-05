@@ -1,19 +1,25 @@
+
+
 <main>
 	<h2>Handmade, Fresh, Daily!</h2>
 
-		<<<< START THE LOOP TO DISPLAY EACH DONUT >>>>
+		{{#each donuts}}
 
 			<div class="donut-container">
 
-				<<<< DONUT IMAGE HERE >>>>
+				<img class='main-img' src="{{this.img}}">
 
-				<h3>   <<<< LINK TO DONUT'S SHOW PAGE, DONUT NAME AS LINK NAME >>>>   </h3>
+				<h3>  <a href="/{{this._id}}">{{this.name}}</a>  </h3>
 
-				<p>$ <<<< DONUT PRICE HERE >>>> each </p>
+				<p>$ {{this.price}} each </p>
+				<form action="/{{this._id}}?_method=DELETE" method="POST">
+       			 <input type="submit" value="Delete">	
+				</form>
 
+				<h3> <a href="/{{this._id}}/edit">Edit ME!!</a> </h3>
 			</div>
 
-		<<<< END THE LOOP >>>>
+		{{/each}}
 
 
 </main>
