@@ -9,7 +9,7 @@ class MenuList extends Component {
         })
 
         return (
-            <div className="menu" >
+            <div className="menu" id='menu' >
                 <h1>Menu</h1>
                 <div className="menu-container">
                     {pizzaComponents}

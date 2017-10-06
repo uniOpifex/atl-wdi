@@ -8,7 +8,7 @@ class Navbar extends Component {
                     <a href='#about'>Our Story</a>
                     <a href='#menu'>Menu</a>
                     <h1>PIZZA-EXPRESS</h1>
-                    <a href='#location'>Location</a>
+                    <a href='#locations'>Location</a>
                     <a href='#contact'>Contact</a>
                 
             </div>
