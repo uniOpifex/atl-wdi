@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+<<<<<<< HEAD
 import ProductList from './ProductList'
 
 class CartView extends Component {
@@ -21,6 +22,13 @@ class CartView extends Component {
         <div>
           <h3>Total Price: {totalPrice}</h3>
         </div>
+=======
+class CartView extends Component {
+  render () {
+    return (
+      <div className="cart">
+        <h1>Cart</h1>
+>>>>>>> 4ac8fd7b8897cd53863bed862283ff1ad51011d6
       </div>
     )
   }

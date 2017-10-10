@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {Component} from 'react'
 
 import AdminView from './AdminView'
@@ -126,6 +127,19 @@ class HomePage extends Component {
             productList={this.state.cartList}
             removeProductFromCart={this.removeProductFromCart}/>
         </div>
+=======
+import React, { Component } from 'react'
+import Header from './Header'
+import Shop from './Shop'
+
+class HomePage extends Component {
+  render () {
+    return (
+      <div>
+        <Header />
+        <hr />
+        <Shop />
+>>>>>>> 4ac8fd7b8897cd53863bed862283ff1ad51011d6
       </div>
     )
   }

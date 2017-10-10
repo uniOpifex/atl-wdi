@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "react-hardware-store2",
   "version": "0.1.0",
   "private": true,
@@ -6,12 +7,22 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
+=======
+  "name": "react-hardware-store",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+>>>>>>> 4ac8fd7b8897cd53863bed862283ff1ad51011d6
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+<<<<<<< HEAD
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
@@ -19,3 +30,7 @@
   "author": "",
   "license": "ISC"
 }
+=======
+  }
+}
+>>>>>>> 4ac8fd7b8897cd53863bed862283ff1ad51011d6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {Component} from 'react'
 
 class Product extends Component {
@@ -60,6 +61,18 @@ class Product extends Component {
       </div>
     )
   }
+=======
+import React from 'react'
+
+const Product = ({ productName, price, description }) => {
+  return (
+    <div>
+      <h3>{productName}</h3>
+      <h4>${price}</h4>
+      <p>{description}</p>
+    </div>
+  )
+>>>>>>> 4ac8fd7b8897cd53863bed862283ff1ad51011d6
 }
 
 export default Product

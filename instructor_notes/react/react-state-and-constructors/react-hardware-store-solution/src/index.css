@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   font-family: "Open Sans";
 }
 
@@ -49,3 +50,7 @@ body {
   padding-bottom: 15px;
   border-top: 1px solid black;
 }
+=======
+  font-family: sans-serif;
+}
+>>>>>>> 4ac8fd7b8897cd53863bed862283ff1ad51011d6
