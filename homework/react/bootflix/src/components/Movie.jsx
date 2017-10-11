@@ -6,20 +6,20 @@ import React, { Component } from 'react';
 class Movie extends Component {
   render() {
   return (
-    <section id="movie-listing">
+    <div id="movie-listing">
       <div className="movie">
-        <h3>{this.props.movie.Title}</h3>
+        <h3>{this.props.title}</h3>
         <p>
-          <strong>Released:</strong>{this.props.movie.Released}<br />
-          <strong>Directed By:</strong>{this.props.movie.Director}<br />
-          <em>Genre: {this.props.movie.Genre}</em>
+          <strong>Released:</strong>{this.props.released}<br />
+          <strong>Directed By:</strong>{this.props.director}<br />
+          <em>Genre: {this.props.genre}</em>
         </p>
-        <p>{this.props.movie.Plot}</p>
+        <p>{this.props.Plot}</p>
         <div>
-        <img src={this.props.movie.Poster} alt='' />
+        <img src={this.props.poster} alt='' />
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 };

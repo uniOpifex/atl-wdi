@@ -2,32 +2,57 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Search from './components/Search';
 import Movie from './components/Movie';
-import example from './omdbExample.json'
+import example from './omdbExample.json';
+import axios from 'axios';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      movie: example
-    }
+  state = {
+    title: '',
+    id: '',
+    year: '',
+    director: '',
+    genre: '',
+    plot: ''
   }
 
   //Update these methods to make axios calls to OMDB and update this.state.movie with the response from the server
-  searchByTitle = () => {
-    console.log("Search by Title");
-  }
 
-  searchById = () => {
-    console.log("Search by ID");
-  }
 
   //Pass _searchByTitle, _searchById, and this.state.movie to it's appropriate child components.
-  handleTitleChange = (event) => {
-    this.setState({titleToSearch: event.target.value})
+  searchByTitle = (event) => {
+    event.preventDefault()
+    const title = event.target.title.value
+    axios.get(`http://www.omdbapi.com/?apikey=d31f1a94=${title}`)
+      .then( (response) => {
+        this.setState({ 
+          title: response.data.Title,
+          year: response.data.Year,
+          director: response.data.Director,
+          genre: response.data.Genre,
+          plot: response.data.Plo
+        });
+        console.log(event);
+      })
+      .catch( (error) => {
+        console.log(error);
+      })
   }
 
-  handleIdChange = (event) => {
-    this.setState({idToSearch: event.target.value})
+  searchById = (event) => {
+    axios.get(`http://www.omdbapi.com/?apikey=d31f1a94=${this.state.idToSearch}`)
+      .then( (response) => {
+        this.setState({
+        title: response.data.Title,
+        year: response.data.Year,
+        director: response.data.Director,
+        genre: response.data.Genre,
+        plot: response.data.Plot
+       });
+        console.log(event);
+      })
+      .catch( (error) => {
+        console.log(error);
+      })
   }
 
   //Pass _searchByTitle, _searchById, and this.state.movie to it's appropriate child components.

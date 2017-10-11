@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 
 // Update the forms to utilize methods being passed down from App.js
-class Search extends Component {
-  render() {
+const Search = (props) => {
+  
+    const { searchByTitle, searchById } = props;
     return (
       <section id="movie-search">
         <strong>Search by:</strong> Title <em>or</em> ID
@@ -24,7 +25,7 @@ class Search extends Component {
 
       </section>
     );
-  };
+  
 }
 
 
