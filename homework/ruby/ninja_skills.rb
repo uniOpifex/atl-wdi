@@ -48,4 +48,20 @@ myFirstArray[2] = "3"
 myFirstArray.push true
 puts myFirstArray[3].class
 
+myFavoriteAnimal = {
+  Edgar: "Donkey",
+  Nate: "Human",
+  Ka: "Snake",
+  Bojack: "Horse",
+  J: "Otter"
+}
+
+myFavoriteAnimal[:Edgar] = "Bear"
+
+favoriteMovie = {}
+
+favoriteMovie[:movie] = "someMovie"
+
+puts favoriteMovie
+
 
