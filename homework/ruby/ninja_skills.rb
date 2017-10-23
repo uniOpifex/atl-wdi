@@ -24,3 +24,21 @@ g = "2"
 gToNumber = 2
 
 puts g.to_f + gToNumber
+
+def my_method1
+  print "You!, user enter a number \n"
+  nums = gets.chomp.to_i
+  puts nums * 2
+end
+
+def my_method2 
+  print "Enter your name \n"
+  first_name = gets.chomp
+  print "What do you like to do? \n"
+  user_likes = gets.chomp
+  print "#{first_name} likes to do #{user_likes}"
+end
+
+
+
+
