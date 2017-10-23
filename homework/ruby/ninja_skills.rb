@@ -15,3 +15,5 @@ d = 10
 e = 10.2
 d = e
 puts d
+
+puts d
