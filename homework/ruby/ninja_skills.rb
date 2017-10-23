@@ -39,6 +39,13 @@ def my_method2
   print "#{first_name} likes to do #{user_likes}"
 end
 
-
+myFirstArray = []
+myFirstArray = ["a","b","c","d","e",1,2,3,4]
+puts myFirstArray.last
+puts myFirstArray[0]
+myFirstArray[1] = "Joe"
+myFirstArray[2] = "3"
+myFirstArray.push true
+puts myFirstArray[3].class
 
 
