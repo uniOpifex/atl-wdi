@@ -55,13 +55,36 @@ myFavoriteAnimal = {
   Bojack: "Horse",
   J: "Otter"
 }
-
 myFavoriteAnimal[:Edgar] = "Bear"
 
 favoriteMovie = {}
-
 favoriteMovie[:movie] = "someMovie"
 
-puts favoriteMovie
+firstRange = 1..10
+firstRange =*(firstRange)
 
+secondRange = 1...1000
+secondRange =*(secondRange)
 
+# for i in firstRange
+#   print i.to_s
+# end
+
+x = 0
+while x < 50
+ x +=1
+ print secondRange[x]
+end
+print "\n"
+
+newRangeArr= []
+firstRange.each do |n|
+  newRangeArr.push n.odd? ? n * 2 : n
+ end
+ print newRangeArr
+
+ firstRange.map! do |n|
+  n.even? ? n.to_s : n
+end
+
+print firstRange
