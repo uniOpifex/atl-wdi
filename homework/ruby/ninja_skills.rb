@@ -16,4 +16,11 @@ e = 10.2
 d = e
 puts d
 
-puts d
+christine = " Hi, I'm Christine"
+likesTo = "long walks on the beach, kinda"
+
+puts "#{christine} and I like #{likesTo}"
+g = "2"
+gToNumber = 2
+
+puts g.to_f + gToNumber
