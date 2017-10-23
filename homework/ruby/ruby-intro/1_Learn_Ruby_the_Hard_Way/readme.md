@@ -100,6 +100,13 @@ Please answer the following questions in the spaces provided.
 
   ```ruby
     # your answer here
+    if 'conditional'
+      'do this'
+    elseif 'conditional'
+      'do this thing'
+    else
+      'do this if nothing else'
+    end
   ```
 
 2.  Please write code that would take the string "007", reverse it,
@@ -107,6 +114,8 @@ Please answer the following questions in the spaces provided.
 
   ```ruby
     # your answer here
+    str = "007"
+    str.reverse
   ```
 
 3.  Please write code that takes the array `[23,56,3,7]`, sorts it,
@@ -115,36 +124,53 @@ Please answer the following questions in the spaces provided.
 
   ```ruby
     # your answer here
+    arr = [23,56,3,7]
+    arr.sort!.reverse!
   ```
 
 3.  What does an exclamation point at the end of a method name usually signify?
 
   ```text
     Your answer here:
+    it mutates the object its being called on.
   ```
 
 4.  What does a question mark and the end of a method name usually signify?
 
   ```text
     Your answer here:
+    It returns a boolean or null value.
   ```
 
 5.  How do you define a method in Ruby? Give a simple example.
 
   ```ruby
     # your answer here
+    def some_method [arguments...]
+      method_body
+    end
   ```
 
 6.  How do you create a class in Ruby? Give a simple example.
 
   ```ruby
     # your answer here
+    class class_Name
+      class body
+    end
   ```
 
 7. Please give an example of how iteration can be performed in Ruby.
 
   ```ruby
     # your answer here
+    Ruby has many of the same iterative methods and loops as jScript
+    for loops
+    each loop
+    .map
+    .each
+    foreach()
+  
   ```
 
 8.  If I modify a class in Ruby by adding a method, will instances of that class
