@@ -88,3 +88,29 @@ firstRange.each do |n|
 end
 
 print firstRange
+
+
+# this is euler problem 1
+print (1...10).select{ |n| n % 3 == 0 || n % 5 == 0 }.reduce(:+)
+
+
+def check_prime? nums
+  
+  (2...(nums)).map do |n|
+    if (nums % n) == 0
+      return false
+    end
+  end
+  return true
+end
+
+print check_prime? 7
+
+
+def getPrimes max
+  
+  return (1...max).select{ |n| check_prime? n }
+  
+end
+
+print getPrimes 100
